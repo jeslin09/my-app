@@ -1,0 +1,108 @@
+.cards-container {
+    display: flex; /* Align items horizontally */
+    margin: auto;
+    max-width: 1140px; /* Max width of the container */
+    padding: 1rem; /* Add padding for spacing */
+    gap: 20px; /* Space between cards */
+}
+
+.cards {
+    display: flex; /* Align cards horizontally */
+    gap: 20px; /* Space between each card */
+    flex: 1; /* Allow this to take available space */
+}
+
+.card {
+    background: rgb(24, 26, 25);
+    padding: 1.2rem;
+    border-radius: 8px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    width: 100%; /* Full width of the flex item */
+    max-width: 400px; /* Larger cards for Resume and Certifications */
+    flex: 1; /* Allow cards to grow */
+    min-height: 250px; /* Ensure a consistent height */
+    display: flex; /* Flex container for alignment */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align items */
+    justify-content: center; /* Center vertically */
+}
+
+.card-image {
+    width: 100%;
+    height: 100px; /* Adjust height for vertical space */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 0.5rem; /* Space between image and text */
+}
+
+.card h3 {
+    color: rgb(255, 255, 255);
+    padding: 0.5rem 0;
+    margin: 0;
+}
+
+.card p {
+    padding-bottom: 0.5rem;
+    font-size: 1rem; /* Slightly smaller font size */
+    text-align: justify;
+}
+
+.card-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 4px;
+    background: rgb(24, 26, 25);
+    margin-top: 0.5rem; /* Reduced margin-top to bring it closer to the title */
+}
+
+.card-link:hover {
+    background: rgb(34, 36, 35);
+}
+
+.contact-card {
+    background: rgb(24, 26, 25);
+    padding: 1rem;
+    border-radius: 8px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    width: 100%; /* Full width of the flex item */
+    max-width: 200px; /* Smaller max-width for the contact card */
+    flex: 0 0 auto; /* Fixed size */
+    display: flex; /* Center content */
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-button {
+    background: rgb(255, 255, 255);
+    color: rgb(24, 26, 25);
+    padding: 0.5rem 1rem;
+    border: 1px solid rgb(24, 26, 25);
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9rem; /* Smaller font size */
+    display: block; /* Block display for better alignment */
+    margin-top: 1rem; /* Margin at the top */
+}
+
+.contact-button:hover {
+    background: rgb(240, 240, 240);
+    color: rgb(24, 26, 25);
+}
+
+@media screen and (max-width: 740px) {
+    .cards-container {
+        flex-direction: column; /* Stack cards vertically on small screens */
+        align-items: center; /* Center items horizontally */
+    }
+    .cards {
+        flex-direction: column; /* Stack cards vertically on small screens */
+    }
+    .card, .contact-card {
+        max-width: 90%; /* Allow cards to be responsive */
+    }
+}

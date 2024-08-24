@@ -1,0 +1,62 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+
+.footer{
+    width: 100%;
+    padding: 6rem 0;
+    background-color: rgba(19, 19, 19, 0.8);
+}
+.footer-container {
+    max-width: 1440px; /* Increase max-width for wider containers */
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3rem; /* Reduce grid-gap if it's too much */
+    padding: 0 2rem; /* Add side padding to spread content */
+
+}
+
+.left{
+    height:100%;
+    max-width:100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+.location, .social {
+    display: flex;
+    align-items: center; /* Ensures icons align vertically with text */
+}
+
+.location p{
+    line-height: 30px;
+}
+.right{
+    height:100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+h4{
+    font-size: 1.4rem;
+    padding-bottom: 0.7rem;
+}
+p{
+    font-size: 1.2rem;
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+@media screen and (max-width: 640px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+    .left {
+        order: 1; /* Ensure the left section appears first */
+    }
+    .right {
+        order: 2; /* Ensure the right section appears below the left */
+    }
+}
